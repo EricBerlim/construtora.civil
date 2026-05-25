@@ -1,0 +1,118 @@
+# ============================
+# CONFIGURAÇÕES DE SEGURANÇA
+# ============================
+
+# Ativar HTTPS (descomente se necessário)
+# RewriteEngine On
+# RewriteCond %{HTTPS} off
+# RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+# ============================
+# HEADERS DE SEGURANÇA
+# ============================
+
+# Prevenir acesso a arquivos sensíveis
+<FilesMatch "^\.">
+    Order Deny,Allow
+    Deny from all
+</FilesMatch>
+
+# Proteção contra XSS
+<IfModule mod_headers.c>
+    Header set X-Content-Type-Options "nosniff"
+    Header set X-Frame-Options "SAMEORIGIN"
+    Header set X-XSS-Protection "1; mode=block"
+    Header set Referrer-Policy "no-referrer-when-downgrade"
+    
+    # Content Security Policy (CSP)
+    Header set Content-Security-Policy "default-src 'self'; script-src 'self' 'unsafe-inline' formspree.io cdn.emailjs.com www.googletagmanager.com; style-src 'self' 'unsafe-inline'; img-src 'self' data: https:; font-src 'self' data:; connect-src 'self' formspree.io www.googletagmanager.com; frame-ancestors 'none';"
+</IfModule>
+
+# ============================
+# CACHE E PERFORMANCE
+# ============================
+
+<IfModule mod_expires.c>
+    ExpiresActive On
+    
+    # Imagens (1 mês)
+    ExpiresByType image/jpeg "access plus 1 month"
+    ExpiresByType image/gif "access plus 1 month"
+    ExpiresByType image/png "access plus 1 month"
+    ExpiresByType image/webp "access plus 1 month"
+    ExpiresByType image/svg+xml "access plus 1 month"
+    ExpiresByType image/x-icon "access plus 1 month"
+    
+    # CSS e JS (1 semana)
+    ExpiresByType text/css "access plus 1 week"
+    ExpiresByType application/javascript "access plus 1 week"
+    ExpiresByType text/javascript "access plus 1 week"
+    
+    # HTML (6 horas - muda frequentemente)
+    ExpiresByType text/html "access plus 6 hours"
+    
+    # Fontes (1 mês)
+    ExpiresByType font/ttf "access plus 1 month"
+    ExpiresByType font/otf "access plus 1 month"
+    ExpiresByType font/woff "access plus 1 month"
+    ExpiresByType font/woff2 "access plus 1 month"
+</IfModule>
+
+# ============================
+# COMPRESSÃO GZIP
+# ============================
+
+<IfModule mod_deflate.c>
+    AddOutputFilterByType DEFLATE text/html
+    AddOutputFilterByType DEFLATE text/plain
+    AddOutputFilterByType DEFLATE text/xml
+    AddOutputFilterByType DEFLATE text/css
+    AddOutputFilterByType DEFLATE text/javascript
+    AddOutputFilterByType DEFLATE application/javascript
+    AddOutputFilterByType DEFLATE application/json
+    AddOutputFilterByType DEFLATE image/svg+xml
+</IfModule>
+
+# ============================
+# REWRITE RULES
+# ============================
+
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    
+    # Remover arquivo index.html da URL
+    RewriteRule ^index\.html$ - [L]
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteRule . index.html [L]
+    
+    # Bloquear acesso a pastas privadas
+    RewriteRule ^\.git - [F]
+    RewriteRule ^\.env - [F]
+    RewriteRule ^\.htaccess - [F]
+    RewriteRule ^README.md - [F]
+    RewriteRule ^COMO_ADICIONAR_IMAGENS.md - [F]
+    RewriteRule ^COMO_COLOCAR_ONLINE.md - [F]
+    RewriteRule ^GUIA_CLIENTE.md - [F]
+    RewriteRule ^node_modules - [F]
+</IfModule>
+
+# ============================
+# TIPOS MIME
+# ============================
+
+AddType video/mp4 .mp4
+AddType video/webm .webm
+AddType application/json .json
+AddType image/webp .webp
+
+# ============================
+# PREVENÇÃO DE HOTLINKING
+# ============================
+
+# Permitir imagens apenas de seu domínio
+# <FilesMatch "\.(jpg|jpeg|png|gif|webp)$">
+#     SetEnvIf Referer "^https?://([^/]+\.)*seu-dominio\.com\.br" local_ref=1
+#     SetEnvIf Referer "^$" local_ref=1
+#     Deny from env=!local_ref
+# </FilesMatch>
