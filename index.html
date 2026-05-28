@@ -1,274 +1,424 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <!-- SEO e Metadados -->
-    <title>Construtora X - Construção Civil Moderna</title>
-    <meta name="description" content="Construtora X entrega obras residenciais, comerciais e industriais com design contemporâneo, prazo cumprido e um cuidado especial com cada detalhe.">
-    <meta name="keywords" content="construção civil, reforma, projetos arquitetônicos, obras modernas, São Paulo, Construtora X">
-    <meta name="author" content="Construtora X">
-    <meta name="theme-color" content="#ff6b4a">
+    <title>Duque's Construtora</title>
+    <meta name="description" content="Na Duque's Construtora você encontra transparência, compromisso e excelência em cada detalhe. Do planejamento à entrega, nossa prioridade é superar suas expectativas.">
+    <meta name="keywords" content="Duque's Construtora, construção civil, reforma, CREA-RJ, Rio de Janeiro, Grande Rio, orçamento grátis">
+    <meta name="author" content="Duque's Construtora">
+    <meta name="theme-color" content="#0d3c72">
     <meta name="robots" content="index, follow">
-    <meta name="language" content="Portuguese">
-    
-    <!-- Open Graph (Redes Sociais) -->
+
     <meta property="og:type" content="website">
-    <meta property="og:title" content="Construtora X - Construção Civil Moderna">
-    <meta property="og:description" content="Projetos inteligentes, execução premium e atendimento dedicado em cada etapa.">
-    <meta property="og:image" content="https://via.placeholder.com/1200x630?text=Construtora+X+Constru%C3%A7%C3%A3o">
-    <meta property="og:url" content="https://seu-dominio.com.br">
-    
-    <!-- Twitter Card -->
+    <meta property="og:title" content="Duque's Construtora | Do desafio à entrega perfeita">
+    <meta property="og:description" content="Construção com inteligência, transparência e entrega segura no Rio e Grande Rio.">
+    <meta property="og:image" content="https://duquesconstrutora.com.br/Imagens/banner1.jpg">
+    <meta property="og:url" content="https://duquesconstrutora.com.br">
+
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Construtora X - Construção Civil Moderna">
-    <meta name="twitter:description" content="Projetos inteligentes, execução premium e atendimento dedicado.">
-    
-    <!-- Security Headers -->
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="csrf-token" content="">
-    <meta name="formspree-id" content="">
-    <meta name="backend-url" content="">
-    
-    <!-- Canonical URL (importante para SEO) -->
-    <link rel="canonical" href="https://seu-dominio.com.br">
-    
-    <!-- Preconnect para performance -->
+    <meta name="twitter:title" content="Duque's Construtora | Do desafio à entrega perfeita">
+    <meta name="twitter:description" content="Construção com inteligência, transparência e entrega segura no Rio e Grande Rio.">
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://via.placeholder.com">
-    <link rel="preconnect" href="https://images.unsplash.com">
-    
-    <!-- Favicon -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="canonical" href="https://duquesconstrutora.com.br">
     <link rel="icon" type="image/x-icon" href="favicon.ico">
-    <link rel="apple-touch-icon" href="apple-touch-icon.png">
-    
-    <!-- CSS -->
+
     <link rel="stylesheet" href="styles.css">
-    
-    <!-- Schema.org para SEO estruturado -->
     <script type="application/ld+json">
     {
         "@context": "https://schema.org",
         "@type": "LocalBusiness",
-        "name": "Construtora X",
-        "description": "Empresa de Construção Civil Moderna",
-        "url": "https://seu-dominio.com.br",
-        "telephone": "(11) 3000-0000",
-        "email": "contato@construtorax.com.br",
+        "name": "Duque's Construtora",
+        "description": "Construtora Civil especializada em reformas e obras no Rio de Janeiro e Grande Rio.",
+        "url": "https://duquesconstrutora.com.br",
+        "telephone": "+55 21 96970-5255",
+        "email": "contato@duquesconstrutora.com.br",
         "address": {
             "@type": "PostalAddress",
-            "streetAddress": "Rua das Construções, 1000",
-            "addressLocality": "São Paulo",
-            "addressRegion": "SP",
-            "postalCode": "01310-100",
+            "addressLocality": "Rio de Janeiro",
+            "addressRegion": "RJ",
             "addressCountry": "BR"
         },
-        "image": "https://via.placeholder.com/1200x630?text=Construtora+X",
+        "areaServed": "Rio de Janeiro",
+        "logo": "https://duquesconstrutora.com.br/Imagens/LOGO.jpeg",
         "sameAs": [
-            "https://facebook.com/construtorax",
-            "https://instagram.com/construtorax",
-            "https://linkedin.com/company/construtorax"
+            "https://instagram.com/duquesconstrutora"
         ]
     }
     </script>
 </head>
 <body>
-    <!-- Header com Menu Hamburger -->
     <header class="header">
-        <div class="container">
-            <div class="logo">
-                <h1>Construtora X</h1>
-                <p class="tagline">Construção Civil Moderna</p>
-            </div>
-            
-            <!-- Menu Hamburger -->
-            <button class="menu-toggle" id="menuToggle">
-                <span></span>
-                <span></span>
+        <div class="container header-inner">
+            <a class="brand" href="#inicio">
+                <img class="brand-logo" src="Imagens/LOGO.jpeg" alt="Duque's Construtora" loading="lazy">
+                <div>
+                    <span class="brand-label">Duque's</span>
+                    <strong>Construtora</strong>
+                </div>
+            </a>
+            <button class="menu-toggle" id="menuToggle" aria-label="Abrir menu">
                 <span></span>
             </button>
-            
-            <!-- Menu Principal -->
             <nav class="nav" id="navMenu">
                 <ul class="nav-list">
                     <li><a href="#inicio">Início</a></li>
-                    <li><a href="#projetos">Projetos</a></li>
+                    <li><a href="#transformacoes">Transformações</a></li>
+                    <li><a href="#problema">Soluções</a></li>
+                    <li><a href="#beneficios">Benefícios</a></li>
+                    <li><a href="#prova">Qualidade</a></li>
                     <li><a href="#servicos">Serviços</a></li>
-                    <li><a href="#sobre">Sobre</a></li>
                     <li><a href="#contato">Contato</a></li>
                 </ul>
             </nav>
         </div>
     </header>
 
-    <!-- Seção Herói -->
-    <section class="hero" id="inicio">
-        <div class="hero-content">
-            <h2>Construindo o Futuro</h2>
-            <p>Qualidade, Segurança e Excelência em Cada Projeto</p>
-            <button class="cta-button">Entre em Contato</button>
-        </div>
-    </section>
-
-    <!-- Seção Carrossel de Projetos -->
-    <section class="projetos" id="projetos">
-        <div class="container">
-            <h2>Nossos Projetos</h2>
-            
-            <div class="carousel-container">
-                <div class="carousel">
-                    <!-- Slide 1 -->
-                    <div class="slide fade">
-                        <img src="https://via.placeholder.com/600x400?text=Obra+Residencial" alt="Projeto Residencial">
-                        <div class="slide-caption">
-                            <h3>Projeto Residencial</h3>
-                            <p>Construção de Condomínio de Luxo</p>
-                        </div>
+    <main>
+        <section class="hero" id="inicio">
+            <div class="hero-shape"></div>
+            <div class="container hero-grid">
+                <div class="hero-copy">
+                    <span class="eyebrow">Do desafio à entrega perfeita!</span>
+                    <h1>Construção com inteligência para obras seguras no Rio de Janeiro</h1>
+                    <p>Na Duque's Construtora, você encontra transparência, compromisso e excelência em cada detalhe. Do planejamento à entrega, nossa prioridade é superar suas expectativas.</p>
+                    <div class="hero-highlight">
+                        <p class="highlight-title">Duque’s Construtora | Reforma Predial e Obras Comerciais</p>
+                        <p>Especialistas em fachadas, manutenção e obras</p>
+                        <ul>
+                            <li>Atendemos condomínios, lojas e empresas</li>
+                            <li>CREA-RJ | Licenciamento e vistorias</li>
+                        </ul>
                     </div>
-
-                    <!-- Slide 2 -->
-                    <div class="slide fade">
-                        <img src="https://via.placeholder.com/600x400?text=Obra+Comercial" alt="Projeto Comercial">
-                        <div class="slide-caption">
-                            <h3>Projeto Comercial</h3>
-                            <p>Centro de Negócios Moderno</p>
-                        </div>
+                    <div class="hero-buttons">
+                        <a class="button button-primary" href="https://wa.me/5521969705255?text=Ol%C3%A1%2C+tenho+interesse+em+um+or%C3%A7amento+gr%C3%A1tis" target="_blank" rel="noreferrer">QUERO UM ORÇAMENTO!</a>
+                        <a class="button button-secondary" href="#contato">Vamos conversar!</a>
                     </div>
-
-                    <!-- Slide 3 -->
-                    <div class="slide fade">
-                        <img src="https://via.placeholder.com/600x400?text=Obra+Industrial" alt="Projeto Industrial">
-                        <div class="slide-caption">
-                            <h3>Projeto Industrial</h3>
-                            <p>Galpão Logístico de Última Geração</p>
-                        </div>
+                    <div class="hero-notes">
+                        <span>+20 anos de experiência</span>
+                        <span>Atendimento no Rio e Grande Rio</span>
+                        <span>Obras com planejamento técnico e acabamento qualificado</span>
                     </div>
-
-                    <!-- Slide 4 -->
-                    <div class="slide fade">
-                        <img src="https://via.placeholder.com/600x400?text=Reforma+e+Restauro" alt="Reforma e Restauro">
-                        <div class="slide-caption">
-                            <h3>Reforma e Restauro</h3>
-                            <p>Revitalização de Imóvel Histórico</p>
-                        </div>
-                    </div>
-
-                    <!-- Controles do Carrossel -->
-                    <a class="prev" onclick="changeSlide(-1)">&#10094;</a>
-                    <a class="next" onclick="changeSlide(1)">&#10095;</a>
                 </div>
-
-                <!-- Indicadores de Slides -->
-                <div class="carousel-indicators">
-                    <span class="dot" onclick="currentSlide(0)"></span>
-                    <span class="dot" onclick="currentSlide(1)"></span>
-                    <span class="dot" onclick="currentSlide(2)"></span>
-                    <span class="dot" onclick="currentSlide(3)"></span>
+                <div class="hero-visual">
+                    <div class="hero-card">
+                        <img src="Imagens/modern1.jpg" alt="Projeto moderno por Duque's Construtora" loading="lazy">
+                        <div class="hero-card-text">
+                            <p></p>
+                        </div>
+                    </div>
+                    <div class="hero-mini-grid">
+                        <div class="mini-card">
+                            <img src="Imagens/externo1.jpg" alt="Fachada externa em obra" loading="lazy">
+                        </div>
+                        <div class="mini-card">
+                            <img src="Imagens/drone1.jpg" alt="Acompanhamento de obra por drone" loading="lazy">
+                        </div>
+                    </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Seção de Serviços -->
-    <section class="servicos" id="servicos">
-        <div class="container">
-            <h2>Nossos Serviços</h2>
-            
-            <div class="servicos-grid">
-                <div class="servico-card">
-                    <div class="servico-icon">🏗️</div>
-                    <h3>Construção Civil</h3>
-                    <p>Execução de projetos residenciais, comerciais e industriais com qualidade garantida.</p>
+        <section class="section section-beforeafter" id="transformacoes">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-label">Antes e Depois</span>
+                    <h2>Mostramos o que realmente muda com nossas obras</h2>
+                    <p>Transformações reais, executadas com método técnico e acabamento de confiança.</p>
                 </div>
-
-                <div class="servico-card">
-                    <div class="servico-icon">🔨</div>
-                    <h3>Reformas</h3>
-                    <p>Renovação completa de espaços com modernização e uso de materiais de qualidade.</p>
-                </div>
-
-                <div class="servico-card">
-                    <div class="servico-icon">📐</div>
-                    <h3>Projetos</h3>
-                    <p>Elaboração de projetos arquitetônicos e estruturais por profissionais especializados.</p>
-                </div>
-
-                <div class="servico-card">
-                    <div class="servico-icon">⚙️</div>
-                    <h3>Manutenção</h3>
-                    <p>Serviços de manutenção preventiva e corretiva para suas edificações.</p>
+                <div class="beforeafter-grid">
+                    <article class="beforeafter-card">
+                        <div class="beforeafter-frame">
+                            <img src="Imagens/antes1.png" alt="Antes da obra" loading="lazy">
+                        </div>
+                        <div class="beforeafter-frame">
+                            <img src="Imagens/depois1.png" alt="Depois da obra" loading="lazy">
+                        </div>
+                    </article>
+                    <article class="beforeafter-card">
+                        <div class="beforeafter-frame">
+                            <img src="Imagens/antes2.png" alt="Antes da reforma" loading="lazy">
+                        </div>
+                        <div class="beforeafter-frame">
+                            <img src="Imagens/depois2.png" alt="Depois da reforma" loading="lazy">
+                        </div>
+                    </article>
+                    <article class="beforeafter-card">
+                        <div class="beforeafter-frame">
+                            <img src="Imagens/antes3.png" alt="Antes do projeto" loading="lazy">
+                        </div>
+                        <div class="beforeafter-frame">
+                            <img src="Imagens/depois3.png" alt="Depois do projeto" loading="lazy">
+                        </div>
+                    </article>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Seção Sobre -->
-    <section class="sobre" id="sobre">
-        <div class="container">
-            <h2>Sobre a Construtora X</h2>
-            
-            <div class="sobre-content">
-                <div class="sobre-text">
-                    <p>
-                        A Construtora X é referência em obras modernas e de alto padrão, com foco em tecnologia, eficiência e design contemporâneo.
-                    </p>
-                    <p>
-                        Nosso compromisso é entregar obras de qualidade, respeitando prazos, orçamentos e, 
-                        principalmente, a segurança de nossos clientes e colaboradores.
-                    </p>
-                    <ul class="sobre-list">
-                        <li>✓ Mais de 200 projetos realizados</li>
-                        <li>✓ Equipe de 50+ profissionais qualificados</li>
-                        <li>✓ Certificações e Acreditações Internacionais</li>
-                        <li>✓ Compromisso com Sustentabilidade</li>
+        <section class="section section-glow" id="problema">
+            <div class="container split">
+                <div>
+                    <span class="section-label">Problema / Solução</span>
+                    <h2>Já sofreu com obras mal feitas e construtoras que somem depois da entrega?</h2>
+                    <p>Somos a alternativa para quem quer sair do ciclo de incertezas e encontrar uma equipe que realmente acompanhe a obra até a entrega. Tudo isso com comunicação clara, cronograma definido e responsabilidade técnica.</p>
+                    <ul class="checklist">
+                        <li>Orçamento transparente, sem custos escondidos.</li>
+                        <li>Fiscalização constante com equipe credenciada CREA-RJ.</li>
+                        <li>Entrega dentro do prazo com acabamento alinhado ao seu projeto.</li>
                     </ul>
                 </div>
-                <div class="sobre-image">
-                    <img src="https://via.placeholder.com/400x300?text=Equipe+Técnica" alt="Sobre Construtora X">
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Seção de Contato -->
-    <section class="contato" id="contato">
-        <div class="container">
-            <h2>Contato</h2>
-            
-            <div class="contato-wrapper">
-                <div class="contato-info">
-                    <div class="info-item">
-                        <h3>📍 Endereço</h3>
-                        <p>Rua das Construções, 1000 - São Paulo, SP</p>
-                    </div>
-                    
-                    <div class="info-item">
-                        <h3>📞 Telefone</h3>
-                        <p>(11) 3000-0000 / (11) 99999-9999</p>
-                    </div>
-                    
-                    <div class="info-item">
-                        <h3>✉️ Email</h3>
-                        <p>contato@construtorax.com.br</p>
+                <div class="feature-card">
+                    <img src="Imagens/interior2.jpg" alt="Acompanhamento de obra com equipe técnica" loading="lazy">
+                    <div>
+                        <h3>Como nossa solução funciona</h3>
+                        <p>Realizamos vistoria técnica, mapeamos as necessidades do cliente e montamos um plano de execução com etapas claras. Assim, você acompanha cada fase e sabe exatamente o que será entregue.</p>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Footer -->
+        <section class="section" id="beneficios">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-label">Benefícios</span>
+                    <h2>Diferenciais que tornam sua obra mais segura e eficiente</h2>
+                    <p>O foco da Duque's Construtora é unir confiança, planejamento e qualidade em cada projeto de reforma ou construção.</p>
+                </div>
+                <div class="grid cards-grid">
+                    <article class="card card-accent">
+                        <h3>Transparência total</h3>
+                        <p>Você recebe orçamento detalhado e atualizações constantes para evitar surpresas e reforçar sua segurança.</p>
+                    </article>
+                    <article class="card">
+                        <h3>Responsabilidade técnica</h3>
+                        <p>Equipe qualificada e credenciada CREA-RJ, com experiência em reformas prediais, comerciais e residenciais.</p>
+                    </article>
+                    <article class="card card-accent">
+                        <h3>Entrega planejada</h3>
+                        <p>Gestão completa do projeto, materiais e cronograma, para sua obra avançar com previsibilidade.</p>
+                    </article>
+                    <article class="card">
+                        <h3>Atendimento no Rio e Grande Rio</h3>
+                        <p>Atuamos em todo o estado do Rio de Janeiro com serviços personalizados para cada tipo de obra.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="section section-alt" id="prova">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-label">Prova social</span>
+                    <h2>Mais do que construir, entregamos confiança</h2>
+                    <p>Somos uma construtora credenciada no CREA-RJ, com mais de 20 anos de experiência em reformas prediais, comerciais e residenciais.</p>
+                </div>
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <strong>20+</strong>
+                        <p>Anos de experiência</p>
+                    </div>
+                    <div class="stat-card">
+                        <strong>100%</strong>
+                        <p>Projetos com vistoria técnica e acompanhamento</p>
+                    </div>
+                    <div class="stat-card">
+                        <strong>Rio e Grande Rio</strong>
+                        <p>Atendimento em toda a região metropolitana</p>
+                    </div>
+                    <div class="stat-card">
+                        <strong>CREA-RJ</strong>
+                        <p>Execução com responsabilidade técnica</p>
+                    </div>
+                </div>
+        </section>
+
+        <section class="section" id="servicos">
+            <div class="container split reverse-on-mobile">
+                <div class="service-copy">
+                    <span class="section-label">Serviços</span>
+                    <h2>Descubra tudo que podemos fazer pela sua obra</h2>
+                    <p>Cada cliente tem uma necessidade. Cada obra tem um plano. Confira nossas entregas para residências e espaços comerciais.</p>
+                </div>
+                <div class="service-lists">
+                    <div class="service-box">
+                        <h3>Residencial</h3>
+                        <ul>
+                            <li>Drywall e forros</li>
+                            <li>Pintura e acabamento</li>
+                            <li>Reforma de ambientes</li>
+                            <li>Adequações e melhorias</li>
+                            <li>Divisórias</li>
+                        </ul>
+                    </div>
+                    <div class="service-box">
+                        <h3>Comercial</h3>
+                        <ul>
+                            <li>Reforma de fachadas</li>
+                            <li>Vistorias e manutenções</li>
+                            <li>Obras para escolas, condomínios, lojas e galpões</li>
+                            <li>Instalação de forros e divisórias</li>
+                            <li>Serralheria, telhados, pintura técnica</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section section-glow" id="faq">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-label">FAQ</span>
+                    <h2>Perguntas frequentes</h2>
+                </div>
+                <div class="faq-grid">
+                    <article class="faq-item">
+                        <h3>Como funciona o orçamento grátis?</h3>
+                        <p>Você nos envia a demanda e agendamos uma visita técnica sem compromisso. Em seguida, receberá uma proposta clara e detalhada.</p>
+                    </article>
+                    <article class="faq-item">
+                        <h3>Vocês atendem em todo o estado do RJ?</h3>
+                        <p>Sim. Atuamos em obras no Rio e no Grande Rio, com logística preparada para atender residências e empreendimentos comerciais.</p>
+                    </article>
+                    <article class="faq-item">
+                        <h3>Como garantir que a obra será entregue como combinado?</h3>
+                        <p>Planejamos todas as etapas, acompanhamos a execução e mantemos comunicação constante. A responsabilidade CREA-RJ dá mais segurança ao projeto.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="section section-cta">
+            <div class="container cta-card">
+                <div>
+                    <span>Vamos conversar sobre sua obra?</span>
+                    <h2>Peça agora seu orçamento grátis e veja como entregar sua obra com confiança.</h2>
+                </div>
+                <div class="cta-actions">
+                    <a class="button button-primary" href="https://wa.me/5521969705255?text=Quero+um+orçamento+grátis" target="_blank" rel="noreferrer">QUERO UM ORÇAMENTO</a>
+                    <a class="button button-secondary" href="#contato">Enviar mensagem</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="section" id="contato">
+            <div class="container split">
+                <div>
+                    <span class="section-label">Contato</span>
+                    <h2>Fale com nossa equipe</h2>
+                    <p>WhatsApp e email prontos para receber sua solicitação de orçamento com rapidez e clareza.</p>
+                    <div class="contact-boxes">
+                        <div class="contact-card">
+                            <strong>WhatsApp</strong>
+                            <a href="https://wa.me/5521969705255?text=Ol%C3%A1%2C+quero+um+orçamento" target="_blank" rel="noreferrer">(21) 96970-5255</a>
+                        </div>
+                        <div class="contact-card">
+                            <strong>Email</strong>
+                            <a href="mailto:contato@duquesconstrutora.com.br">contato@duquesconstrutora.com.br</a>
+                        </div>
+                        <div class="contact-card">
+                            <strong>Região</strong>
+                            <p>Atendemos todo o Rio de Janeiro e Grande Rio.</p>
+                        </div>
+                    </div>
+                </div>
+                <form class="contact-form" id="contactForm">
+                    <label>
+                        Nome completo
+                        <input type="text" name="nome" placeholder="Seu nome" required>
+                    </label>
+                    <label>
+                        Email
+                        <input type="email" name="email" placeholder="seu@email.com" required>
+                    </label>
+                    <label>
+                        Mensagem
+                        <textarea name="mensagem" rows="5" placeholder="Conte mais sobre seu projeto" required></textarea>
+                    </label>
+                    <button class="button button-primary" type="submit">Enviar mensagem</button>
+                    <p class="form-message" id="formMessage"></p>
+                </form>
+            </div>
+        </section>
+
+    </main>
+
     <footer class="footer">
-        <div class="container">
-            <p>&copy; 2026 Construtora X - Construção Civil. Site por Éric Berlim. Todos os direitos reservados.</p>
-            <div class="social-links">
-                <a href="#">Facebook</a>
-                <a href="#">Instagram</a>
-                <a href="#">LinkedIn</a>
+        <div class="container footer-inner">
+            <div>
+                <strong>Duque's Construtora</strong>
+                <p>Construção Civil com transparência, compromisso e excelência em cada detalhe.</p>
+            </div>
+            <div class="footer-links">
+                <a href="https://instagram.com/duquesconstrutora" target="_blank" rel="noreferrer">Instagram</a>
             </div>
         </div>
+        <p class="footer-note">© 2026 Duque's Construtora | Desenvolvido por Éric Berlim.</p>
     </footer>
 
-    <script src="script.js"></script>
+    <script>
+        const menuToggle = document.getElementById('menuToggle');
+        const navMenu = document.getElementById('navMenu');
+        const navLinks = document.querySelectorAll('.nav-list a');
+        const sections = document.querySelectorAll('main section[id]');
+
+        if (menuToggle && navMenu) {
+            menuToggle.addEventListener('click', () => {
+                menuToggle.classList.toggle('active');
+                navMenu.classList.toggle('active');
+            });
+            navLinks.forEach(link => {
+                link.addEventListener('click', () => {
+                    menuToggle.classList.remove('active');
+                    navMenu.classList.remove('active');
+                });
+            });
+        }
+
+        const observer = new IntersectionObserver(entries => {
+            entries.forEach(entry => {
+                const id = entry.target.getAttribute('id');
+                const navLink = document.querySelector(`.nav-list a[href="#${id}"]`);
+                if (entry.isIntersecting) {
+                    entry.target.querySelector('.section-header')?.classList.add('visible');
+                    navLinks.forEach(link => link.classList.remove('active'));
+                    navLink?.classList.add('active');
+                }
+            });
+        }, {
+            threshold: 0.3
+        });
+
+        sections.forEach(section => observer.observe(section));
+
+        const form = document.getElementById('contactForm');
+        const formMessage = document.getElementById('formMessage');
+        if (form) {
+            form.addEventListener('submit', event => {
+                event.preventDefault();
+                const nome = form.nome.value.trim();
+                const email = form.email.value.trim();
+                const mensagem = form.mensagem.value.trim();
+                if (nome.length < 3 || email.length < 5 || mensagem.length < 10) {
+                    formMessage.textContent = 'Preencha todos os campos corretamente para continuarmos.';
+                    formMessage.classList.add('error');
+                    return;
+                }
+                const body = encodeURIComponent(`Nome: ${nome}\nEmail: ${email}\nMensagem: ${mensagem}`);
+                const mailto = `mailto:contato@duquesconstrutora.com.br?subject=Orçamento%20Grátis&body=${body}`;
+                window.location.href = mailto;
+                formMessage.textContent = 'Obrigado! Seu pedido está pronto para envio. Abra o seu email ou entre em contato pelo WhatsApp.';
+                formMessage.classList.remove('error');
+            });
+        }
+
+        window.addEventListener('scroll', () => {
+            document.querySelector('.header').classList.toggle('scrolled', window.scrollY > 20);
+        });
+    </script>
 </body>
 </html>
